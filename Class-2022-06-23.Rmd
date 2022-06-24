@@ -10,7 +10,11 @@ library(billboard)
 library(tidyverse)
 ```
 
-```{r}
+```{r, include=FALSE}
+x = billboard |>  
+  as_tibble(billboard) |> 
 ```
+
+Which year has the most unique artists?
 
 
