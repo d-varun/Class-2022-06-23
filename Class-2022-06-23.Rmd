@@ -11,10 +11,22 @@ library(tidyverse)
 ```
 
 ```{r, include=FALSE}
-x = billboard |>  
-  as_tibble(billboard) |> 
+x = wiki_hot_100s |>  
+  as_tibble(wiki_hot_100s) |> 
+  mutate(year = as.numeric(year))
 ```
 
 Which year has the most unique artists?
+
+```{r}
+x |>  
+  group_by(year) |> 
+  distinct(artist) |> 
+  summarize(unique_artists = n()) |> 
+  ggplot(aes(year, unique_artists)) +
+  geom_point()
+
+```
+
 
 
