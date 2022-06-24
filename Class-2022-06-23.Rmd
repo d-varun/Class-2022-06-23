@@ -1,0 +1,9 @@
+---
+title: "Class-2022-06-23"
+output: html_document
+date: '2022-06-24'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
